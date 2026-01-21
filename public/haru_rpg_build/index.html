@@ -6,27 +6,6 @@
     <title>Unity Web Player | Haru RPG</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <style>
-      html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background: #000;
-      }
-      #unity-container {
-        width: 100vw !important;
-        height: 100vh !important;
-        margin: 0 !important;
-        padding: 0 !important;
-      }
-      #unity-canvas {
-        width: 100% !important;
-        height: 100% !important;
-        display: block;
-      }
-    </style>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -76,9 +55,9 @@
       var loaderUrl = buildUrl + "/Haru RPG Build.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/Haru RPG Build.data.gz",
-        frameworkUrl: buildUrl + "/Haru RPG Build.framework.js.gz",
-        codeUrl: buildUrl + "/Haru RPG Build.wasm.gz",
+        dataUrl: buildUrl + "/Haru RPG Build.data",
+        frameworkUrl: buildUrl + "/Haru RPG Build.framework.js",
+        codeUrl: buildUrl + "/Haru RPG Build.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Haru RPG",
@@ -125,8 +104,8 @@
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "100%";
-        canvas.style.height = "100%";
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
